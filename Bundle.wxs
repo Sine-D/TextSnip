@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+    <Bundle Name="TextSnip Setup" 
+            Version="1.0.0.0" 
+            Manufacturer="Sineth Dinsara" 
+            UpgradeCode="A2C3D4E5-F6A7-B8C9-0D1E-2F3A4B5C6D7E">
+        
+        <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+            <!-- You can provide a custom license file path here -->
+            <bal:WixStandardBootstrapperApplication LicenseUrl="" SuppressOptionsUI="yes" />
+        </BootstrapperApplicationRef>
+
+        <Chain>
+            <MsiPackage SourceFile="dist\TextSnip.msi" DisplayInternalUI="yes" />
+        </Chain>
+    </Bundle>
+</Wix>
